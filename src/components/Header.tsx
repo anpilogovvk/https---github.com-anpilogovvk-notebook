@@ -11,10 +11,10 @@ function Week(){
   let currentDateTime = new Date();
   let startTimeOfCurrentYear = (new Date(currentDateTime.getFullYear(), 0, 1)).getTime();
   let currentTime = currentDateTime.getTime();
-  let pastTimeOfStartCurrentYear: number = currentTime - startTimeOfCurrentYear;
-	let hourOfMillisecs: number = 3600000;
-  let hoursOfOneWeek: number = 168;
-  let NumberOfWeek: number=  Math.floor((Math.ceil(pastTimeOfStartCurrentYear / hourOfMillisecs / hoursOfOneWeek)))
+  let pastTimeOfStartCurrentYear = currentTime - startTimeOfCurrentYear;
+	let hourOfMillisecs = 3600000;
+  let hoursOfOneWeek = 168;
+  let NumberOfWeek =  Math.floor((Math.ceil(pastTimeOfStartCurrentYear / hourOfMillisecs / hoursOfOneWeek)))
 
 return(
   <h2>
