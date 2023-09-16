@@ -7,10 +7,9 @@ type Time = {
   time:Date
 }
 
-function Week(){
-  let currentDateTime = new Date();
-  let startTimeOfCurrentYear = (new Date(currentDateTime.getFullYear(), 0, 1)).getTime();
-  let currentTime = currentDateTime.getTime();
+function Week({ time }:Time){
+  let startTimeOfCurrentYear = (new Date(time.getFullYear(), 0, 1)).getTime();
+  let currentTime = time.getTime();
   let pastTimeOfStartCurrentYear = currentTime - startTimeOfCurrentYear;
 	let hourOfMillisecs = 3600000;
   let hoursOfOneWeek = 168;
@@ -31,11 +30,11 @@ function Clock({ time }:Time) {
   );
 }
 
-function MegaDate(){
-  const DateOne = new Date()
-  let getYear = DateOne.getFullYear();
-  let getDate = DateOne.getDate();
-  let getMonth = DateOne.getMonth();
+function MegaDate({ time }:Time){
+  //const DateOne = new Date()
+  let getYear = time.getFullYear();
+  let getDate = time.getDate();
+  let getMonth = time.getMonth();
     const Months = [
       {id: 0,
         name:'Января'},
@@ -89,8 +88,8 @@ export default function Header() {
     const time = useTime()
     return(
         <div className='Header-bar'>
-            <h1 className='NumberOfWeek'>{<Week />}</h1>
-            <h1>{<MegaDate />}</h1>
+            <h1 className='NumberOfWeek'>{<Week time={time}/>}</h1>
+            <h1>{<MegaDate time={time}/>}</h1>
             <h1 className='Time'>{<Clock time={time}/>} </h1>
         </div>
     )
