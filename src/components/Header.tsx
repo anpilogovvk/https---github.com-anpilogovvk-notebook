@@ -14,7 +14,7 @@ function Week(){
   let pastTimeOfStartCurrentYear: number = currentTime - startTimeOfCurrentYear;
 	let hourOfMillisecs: number = 3600000;
   let hoursOfOneWeek: number = 168;
-  let NumberOfWeek: number=  Math.floor((Math.ceil(pastTimeOfStartCurrentYear / hourOfMillisecs / hoursOfOneWeek).toFixed(2)))
+  let NumberOfWeek: number=  Math.floor((Math.ceil(pastTimeOfStartCurrentYear / hourOfMillisecs / hoursOfOneWeek)))
 
 return(
   <h2>
