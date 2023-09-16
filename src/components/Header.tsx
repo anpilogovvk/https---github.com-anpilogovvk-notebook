@@ -72,7 +72,6 @@ function MegaDate({ time }:Time){
     )
 }
 
-
  function useTime() {
     const [time, setTime] = useState(() => new Date());
     useEffect(() => {
