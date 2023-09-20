@@ -1,13 +1,17 @@
 import {Header} from "./components/Header"
+import { PlanLayout } from "./components/Layout/MagorLayout";
 
 
 
 
-export default function Poem() {
+export default function App() {
   return (
     <>
       <div className="App">
-          <div><Header/></div>
+        <PlanLayout>
+          <Header/>
+          
+        </PlanLayout>
         </div>
     </>
   );
